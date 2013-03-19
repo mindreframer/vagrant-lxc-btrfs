@@ -4,9 +4,31 @@
 ## Problem
 
 You want to use LXC and Btrfs on OSX. VirtualBox + Vagrant to rescue!
+I'have attached a 10GB disk to VM (/dev/sdb) for Btrfs
+
+### Create Btrfs Volume
+
+    $ sudo mkfs.btrfs -L btrfs-test /dev/sdb
+
+    # mount it to defaulf folder for LXC VMs
+    $ mount /dev/sdb /var/lib/lxc
+
+    # create a linux container
+    $ sudo lxc-create -n mycontainer -t ubuntu
 
 
 ## How to use
+
+
+LXC Guide:
+  http://wiki.1tux.org/wiki/Lxc/Running
+  http://tech.shift.com/post/39072117037/advanced-devops-with-vagrant-and-lxc
+  http://wrocloverb-lxc.site44.com/
+
+Btrf Guide:
+  http://www.howtoforge.com/a-beginners-guide-to-btrfs
+  http://www.funtoo.org/wiki/BTRFS_Fun
+  http://terrywang.net/archives/1611 (with LXC)
 
 
 ## Contribute
