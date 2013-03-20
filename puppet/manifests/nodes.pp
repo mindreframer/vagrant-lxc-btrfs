@@ -3,5 +3,6 @@ node default {
   class{"runit":}
   -> class{"btrfs":}
   -> class{"lxc":}
+  -> class{"openvswitch":}
   -> class{"openflow":}
 }
