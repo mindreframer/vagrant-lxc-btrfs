@@ -21,15 +21,17 @@ I'have attached a 10GB disk to VM (/dev/sdb) for Btrfs
 
 
 LXC Guide:
-  http://wiki.1tux.org/wiki/Lxc/Running
-  http://tech.shift.com/post/39072117037/advanced-devops-with-vagrant-and-lxc
-  http://wrocloverb-lxc.site44.com/
-  http://help.ubuntu.ru/wiki/%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_ubuntu_server/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/lxc
+
+    http://wiki.1tux.org/wiki/Lxc/Running
+    http://tech.shift.com/post/39072117037/advanced-devops-with-vagrant-and-lxc
+    http://wrocloverb-lxc.site44.com/
+    http://help.ubuntu.ru/wiki/%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_ubuntu_server/%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/lxc
 
 Btrf Guide:
-  http://www.howtoforge.com/a-beginners-guide-to-btrfs
-  http://www.funtoo.org/wiki/BTRFS_Fun
-  http://terrywang.net/archives/1611 (with LXC)
+
+    http://www.howtoforge.com/a-beginners-guide-to-btrfs
+    http://www.funtoo.org/wiki/BTRFS_Fun
+    http://terrywang.net/archives/1611 (with LXC)
 
 
 ## Contribute
@@ -42,24 +44,9 @@ Please raise issues via the github issue tracker.
 
 ## License
 
-Please see the [LICENSE](https://github.com/mindreframer/vagrant-varnish-nginx-lua/blob/master/LICENSE)
+Please see the [LICENSE](https://github.com/mindreframer/vagrant-lxc-btrfs/blob/master/LICENSE)
 file.
 
 
 [Vagrant]: http://vagrantup.com
 [Puppet]: http://puppetlabs.com
-
-
-======== http://www.howtoforge.com/a-beginners-guide-to-btrfs ===========
-- Add a new (virtual) hard disk to the VM
-    $ cat /proc/partitions
-    major minor  #blocks  name
-
-      11        0    1048575 sr0
-       8        0   41943040 sda
-       8        1   41417728 sda1
-       8        2          1 sda2
-       8        5     522240 sda5
-       8       16   10485760 sdb <-- our new 10GB drive
-
-- mkfs.btrfs /dev/sdb
