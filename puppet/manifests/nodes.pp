@@ -4,5 +4,4 @@ node default {
   -> class{"btrfs":}
   -> class{"lxc":}
   -> class{"openflow":}
-  #-> class{"kernel::lxc":}
 }
