@@ -10,7 +10,7 @@ I'have attached a 10GB disk to VM (/dev/sdb) for Btrfs
 
     $ sudo mkfs.btrfs -L btrfs-test /dev/sdb
 
-    # mount it to defaulf folder for LXC VMs
+    # mount it to default folder for LXC VMs
     $ mount /dev/sdb /var/lib/lxc
 
     # create a linux container
